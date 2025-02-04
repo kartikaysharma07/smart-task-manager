@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+    --background-color: white;
+    --text-color: black;
+    --nav-background-color: white;
+    --nav-text-color: black;
+}
+
+[data-theme='dark'] {
+    --background-color: #1a202c;
+    --text-color: white;
+    --nav-background-color: #1a202c;
+    --nav-text-color: white;
+}
+
+body {
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='dark'] body {
+    background: linear-gradient(to right, #2D3748, #4A5568);
+}
+
+[data-theme='dark'] {
+    background: var(--dark-gradient);
+}
+
+[data-theme='light'] {
+    background: var(--light-gradient);
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
+}
